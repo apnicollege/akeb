@@ -1,0 +1,44 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <h3>Webinar Registration</h3>
+
+          <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                    <p><small>Verify email</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle"  disabled="disabled">2</a>
+                    <p><small>Introduce yourself</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p><small> Participate in Webinar</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-success btn-circle" >4</a>
+                    <p><small>Finish</small></p>
+                </div>
+            </div>
+        </div>
+        <BR><BR>
+        <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+          <mat-card>
+            <h5 class="text-center mb-4">Registration Done!!!</h5>
+
+            <p>Dear {{user?.fName}}, Thank you taking time out and giving us valuable information.
+            </p>
+            <p>We are constantly striving to provide our youngsters with latest career and education related
+               webinars.
+            </p>
+            <p> Warm Regards, <BR>
+              Webinar Team.
+           </p>
+          </mat-card>
+
+        </div>
+      </div>
+  </div>
+</div>

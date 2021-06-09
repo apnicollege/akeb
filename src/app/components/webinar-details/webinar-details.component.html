@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="main-body">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+          <div class="card bg-light mb-3"  >
+
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">
+                {{webinar?.title}}</h4>
+
+            </div>
+          </div>
+        </nav>
+
+
+        <div class="row gutters-sm">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+
+                  <div class="mt-3">
+                    <h4>Speaker(s)</h4>
+                     <div [innerHTML]="webinar?.speakers">
+
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-8">
+            <div class="card mb-3">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Session Details</h6>
+                  </div>
+                  <div class="col-sm-9" [innerHTML]="webinar?.description">
+
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Date</h6>
+                  </div>
+                  <div class="col-sm-9">
+                    &nbsp;&nbsp;&nbsp; {{webinar?.date}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Day</h6>
+                  </div>
+                  <div class="col-sm-9">
+                    &nbsp;&nbsp;&nbsp; {{webinar?.day}}
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Time</h6>
+                  </div>
+                  <div class="col-sm-9">
+                    &nbsp;&nbsp;&nbsp; {{webinar?.time}}
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                  <div class="col-sm-12 d-grid gap-2">
+                    <BR>
+                    <button class="btn btn-lg btn-info" type="button" routerLink="/register/{{webinar?.id}}">Register</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>

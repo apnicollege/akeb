@@ -1,0 +1,77 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <h3>Webinar Registration</h3>
+
+          <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-success btn-circle" >1</a>
+                    <p><small>Verify email</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p><small>Introduce yourself</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p><small> Participate in Webinar</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p><small>Finish</small></p>
+                </div>
+            </div>
+        </div>
+        <BR><BR>
+        <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+          <mat-card style="width: 370px;">
+            <h5 class="text-center mb-4">Start Registration</h5>
+
+            <form class="form-group" (submit)="OnFormSubmit()" [formGroup]="registrationForm">
+
+              <mat-card-content>
+        <!--
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Username">
+                </mat-form-field>
+        -->
+
+                <mat-form-field>
+                  <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+
+                <div class="row">
+                  <div class="col-md-12 mx-auto">
+
+                      <div class="card mt-3">
+                          <div class="card-body">
+                              <div #recaptcha ></div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+        <!--
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Password">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Choose a role...</mat-label>
+                  <mat-select>
+                    <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+        -->
+              </mat-card-content>
+
+               <button mat-stroked-button color="accent" class="btn-block" [disabled]="!registrationForm.valid">Start Registration</button>
+
+            </form>
+          </mat-card>
+
+        </div>
+      </div>
+  </div>
+</div>

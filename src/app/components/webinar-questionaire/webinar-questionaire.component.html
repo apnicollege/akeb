@@ -1,0 +1,129 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+          <h3>Webinar Registration</h3>
+
+          <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                    <p><small>Verify email</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p><small>Introduce yourself</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-success btn-circle" >3</a>
+                    <p><small> Participate in Webinar</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="javascript::void" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p><small>Finish</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+          <h5 class="text-center mb-4">Help us know you better.</h5>
+          <form  (submit)="OnFormSubmit()" [formGroup]="registrationForm">
+              <div class="row">
+                <div class="col-sm-12 ">
+                  <div >
+                    <div>
+                      <p class="question"> {{q1}}
+                      </p>
+                      <ejs-combobox [dataSource]='a1List' placeholder = 'Please specify or select from the list' formControlName="a1"></ejs-combobox>`
+
+                    </div>
+                  </div>
+                 </div>
+              </div>
+              <BR>
+              <div class="row">
+                <div class="col-sm-12 ">
+                  <div >
+                    <div>
+                      <p class="question">{{q2}}
+                      </p>
+                      <ejs-multiselect
+                        [dataSource]='a2List'
+                        [allowCustomValue]=true
+                        [mode]='box'
+                        [placeholder]='waterMark'
+                        [fields]='fields'
+                        formControlName="a2">
+                      </ejs-multiselect>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+              <BR>
+                <div class="row">
+                  <div class="col-sm-12 ">
+                    <div >
+                      <div>
+                        <p class="question">{{q3}}
+                        </p>
+                        <ejs-combobox  [dataSource]='a3List' placeholder = 'Please specify or select from the list' formControlName="a3"></ejs-combobox>`
+
+                      </div>
+                    </div>
+                   </div>
+                </div>
+
+
+                    <BR>
+                      <div class="row">
+                        <div class="col-sm-12 ">
+                          <div >
+                            <div>
+                              <p class="question">{{q4}}
+                              </p>
+                              <ejs-multiselect
+                                [dataSource]='a4List'
+                                [allowCustomValue]=true
+                                [mode]='box'
+                                [placeholder]='waterMark'
+                                [fields]='fields'
+                                formControlName="a4">
+                              </ejs-multiselect>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                      <BR>
+                        <div class="row">
+                          <div class="col-sm-12 ">
+                            <div >
+                              <div>
+                                <p class="question"> {{q5}}
+
+                                </p>
+                                <ejs-textbox id="textarea" #default rows="2"  floatLabelType="Auto" [multiline]="true" required formControlName="a5"></ejs-textbox>
+                              </div>
+                            </div>
+                           </div>
+                        </div>
+                        <BR>
+                          <div class="row">
+                            <div class="col-sm-12 ">
+                              <div >
+                                <div>
+                                  <p class="question"> {{q8}}
+                                    <ejs-inplaceeditor #dropdownEle mode="Inline" [model]="dropDownListModel" type="DropDownList" [value]='dropdownValue' formControlName="a8"></ejs-inplaceeditor>
+                                  </p>
+                                 </div>
+                              </div>
+                             </div>
+                          </div>
+             <div class="mt-4 row justify-content-end">
+                  <div class="form-group col-sm-4"> <button type="submit" [disabled]="!registrationForm.valid" class="btn btn-secondary">Submit Info</button> </div>
+              </div>
+          </form>
+      </div>
+
+
+      </div>
+  </div>
+</div>
