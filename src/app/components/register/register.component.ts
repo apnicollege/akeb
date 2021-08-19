@@ -23,7 +23,9 @@ export class RegisterComponent implements OnInit {
     email: ''
   };
   constructor(private _registerService: RegisterService,private _snackBar: MatSnackBar,
-    private route: Router, private actRoute: ActivatedRoute) { }
+    private route: Router, private actRoute: ActivatedRoute) {
+      window.scroll(0,0);
+    }
 
   ngOnInit() {
     window.scroll(0,0);

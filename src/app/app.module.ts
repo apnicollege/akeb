@@ -32,6 +32,7 @@ import { MaskedTextBoxModule } from '@syncfusion/ej2-angular-inputs';
 import { WebinarQuestionaireComponent } from './components/webinar-questionaire/webinar-questionaire.component';
 import { MultiSelectModule } from '@syncfusion/ej2-angular-dropdowns';
 import { ComboBoxService, InPlaceEditorAllModule } from '@syncfusion/ej2-angular-inplace-editor';
+import { CollegeComponent } from './components/college/college.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ComboBoxService, InPlaceEditorAllModule } from '@syncfusion/ej2-angular
     DashboardComponent,
     WebinarsComponent,
     WebinarDetailsComponent,
-    WebinarQuestionaireComponent
+    WebinarQuestionaireComponent,
+    CollegeComponent
   ],
   imports: [
     BrowserModule,

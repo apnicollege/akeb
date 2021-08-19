@@ -10,16 +10,17 @@
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-angular-inplace-editor/styles/material.css';
+
 html,
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   min-height: 100vh;
-  background: #e2e2e2;
+  background: #ffffff;
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-
+/* previous background: e2e2e2 , nav-bar-bg-primary*/
 .app-header {
   justify-content: space-between;
   position: fixed;
@@ -36,7 +37,7 @@ body {
   top: 0;
   opacity: 1;
 
-  padding: 60px 50px 40px 50px;
+  padding: 30px 20px 20px 20px;
   width: 100%;
   background: #fff;
   border-radius: 10px;
@@ -84,6 +85,12 @@ body {
   padding: 6px 0;
   font-size: 12px;
   line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-bg{
+  color: #128807;
+
+
   border-radius: 15px;
 }
 

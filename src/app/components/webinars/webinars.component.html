@@ -7,20 +7,16 @@
           <BR>
      </div>
   </div>
-  <div class="row ml-2">
-      <div class="col-sm-6" *ngFor="let upWeb of upcomingWebinars">
+  <div class="row">
+      <div class="col-sm-5" *ngFor="let upWeb of upcomingWebinars">
         <div class="card box">
           <div class="card-body">
             <h4 class="card-title">{{upWeb.title}}</h4>
-            <h6 class="card-subtitle mb-2 text-muted">{{upWeb.date}} {{upWeb.day}} {{upWeb.time}}</h6>
-            <p class="card-text" [innerHTML]="upWeb.description">
-
-            </p>
-            <p>
-              Speaker(s) : {{upWeb.speakers}}
-            </p>
-            <a routerLink="/webinar-details/{{upWeb.id}}" class="btn btn-info">View Details</a> &nbsp;&nbsp;&nbsp;
-            <a routerLink="/register/{{upWeb.id}}" class="btn btn-info">Register</a>
+            <BR>
+            <h6 class="card-subtitle mb-2 text-muted">Date: {{upWeb.date}} <BR> {{upWeb.day}} {{upWeb.time}}</h6>
+            <BR>
+            <a routerLink="/webinar-details/{{upWeb.id}}" class="btn btn-bg">View Details</a> &nbsp;&nbsp;&nbsp;
+            <a routerLink="/register/{{upWeb.id}}" class="btn btn-bg">Register</a>
           </div>
         </div>
       </div>
@@ -39,7 +35,7 @@
           <BR>
      </div>
   </div>
-
+  <!--
   <div class="row">
     <div class="col-sm-4">
       <div class="card box">
@@ -78,4 +74,5 @@
     </div>
 
 </div>
+-->
 </div>
